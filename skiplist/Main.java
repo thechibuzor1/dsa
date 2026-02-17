@@ -389,40 +389,28 @@ public class Main {
             String choice = scanner.nextLine().trim();
 
             switch (choice) {
-                case "1":
-                    // Insert node operation
+                case "1" -> // Insert node operation
                     insertNodeOperation(scanner, skiplist);
-                    break;
 
-                case "2":
-                    // Delete node operation
+                case "2" -> // Delete node operation
                     deleteNodeOperation(scanner, skiplist);
-                    break;
 
-                case "3":
-                    // Search node operation
+                case "3" -> // Search node operation
                     searchNodeOperation(scanner, skiplist);
-                    break;
 
-                case "4":
-                    // Print the current state of the skip list
+                case "4" -> // Print the current state of the skip list
                     skiplist.printSkipList();
-                    break;
 
-                case "5":
-                    // Generate random nodes for testing
+                case "5" -> // Generate random nodes for testing
                     generateRandomNodes(scanner, skiplist);
-                    break;
 
-                case "6":
+                case "6" -> {
                     // Exit the application
                     running = false;
                     System.out.println("Exiting application. Goodbye!");
-                    break;
+                }
 
-                default:
-                    System.out.println("Invalid choice. Please enter a number between 1 and 6.");
-                    break;
+                default -> System.out.println("Invalid choice. Please enter a number between 1 and 6.");
             }
         }
 
